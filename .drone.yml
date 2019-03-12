@@ -1,0 +1,14 @@
+kind: pipeline
+name: default
+
+steps:
+- name: publish
+  image: plugins/github-release
+  settings:
+    api_key: 
+        from_secret: git-release-token
+    files: README.md 
+    title: kubeadm-${DRONE_TAG}
+    note: README.md 
+    when:
+        event: tag
