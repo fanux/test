@@ -10,5 +10,6 @@ steps:
     files: README.md 
     title: kubeadm-${DRONE_TAG}
     note: README.md 
+    base_url: https://github.com/fanux/kube
     when:
         event: tag
